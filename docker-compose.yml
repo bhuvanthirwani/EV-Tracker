@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: vehicle-backend
+    volumes:
+      - ./backend/data:/app/data
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////app/data/vehicle.db
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  data-generator:
+    build: ./generator
+    container_name: data-generator
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      - BACKEND_URL=http://backend:8000/api/v1/telemetry
+      - IMEI=123456789012345
+
+  # frontend:
+  #   build: ./frontend
+  #   container_name: vehicle-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   environment:
+  #     - REACT_APP_API_URL=http://localhost:8000/api/v1
