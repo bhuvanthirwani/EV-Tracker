@@ -1,0 +1,57 @@
+[
+  {
+    "id": "vh-001",
+    "registration_number": "8XYZ123",
+    "chassis_number": "5YJ3E1EA1KF123456",
+    "vin": "5YJ3E1EA1KF123456",
+    "vehicle_category": "Tesla Model 3",
+    "vehicle_state": "ACTIVE",
+    "created_at": "2023-09-15T08:00:00Z",
+    "lat": 34.0325,
+    "lng": -118.2355
+  },
+  {
+    "id": "vh-002",
+    "registration_number": "NYC-4589",
+    "chassis_number": "5YJSA1E24GF234567",
+    "vin": "5YJSA1E24GF234567",
+    "vehicle_category": "Tesla Model S",
+    "vehicle_state": "ACTIVE",
+    "created_at": "2023-08-20T10:30:00Z",
+    "lat": 40.7180,
+    "lng": -73.9965
+  },
+  {
+    "id": "vh-003",
+    "registration_number": "FL-9921",
+    "chassis_number": "7SAYGDEE6PF345678",
+    "vin": "7SAYGDEE6PF345678",
+    "vehicle_category": "Tesla Model Y",
+    "vehicle_state": "ACTIVE",
+    "created_at": "2023-10-01T14:15:00Z",
+    "lat": 25.6470,
+    "lng": -80.3350
+  },
+  {
+    "id": "vh-004",
+    "registration_number": "TX-BC55",
+    "chassis_number": "5YJXCBE28MF456789",
+    "vin": "5YJXCBE28MF456789",
+    "vehicle_category": "Tesla Model X",
+    "vehicle_state": "ACTIVE",
+    "created_at": "2023-07-12T09:45:00Z",
+    "lat": 30.3325,
+    "lng": -97.7130
+  },
+  {
+    "id": "vh-005",
+    "registration_number": "IL-2204",
+    "chassis_number": "7G234E567LF567890",
+    "vin": "7G234E567LF567890",
+    "vehicle_category": "Tesla Cybertruck",
+    "vehicle_state": "ACTIVE",
+    "created_at": "2023-11-05T16:20:00Z",
+    "lat": 41.8690,
+    "lng": -87.6400
+  }
+]

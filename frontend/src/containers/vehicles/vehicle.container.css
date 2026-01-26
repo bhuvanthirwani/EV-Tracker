@@ -1,0 +1,182 @@
+.vehicle-card-container {
+    margin: 0 0 1.48vh;
+}
+
+.alert-box {
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    line-height: 2;
+    position: sticky;
+    top: 7vh;
+    z-index: 11;
+}
+
+.alert-box-text {
+    font-size: var(--sm-font);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert-box-link {
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.close-icon {
+    color: white;
+    -webkit-text-stroke: 3px var(--accent-color);
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    float: right;
+    margin-top: -7px;
+    margin-right: -5px;
+}
+
+.arrow-right-icon {
+    color: white;
+    cursor: pointer;
+    outline: none;
+    -webkit-text-stroke: 1.5px var(--accent-color);
+    padding-left: 5px;
+}
+
+.vehicle-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    padding: 1vh 0.5vw 1vh 0;
+    padding: 1.785vh 1.116vw 1.785vh 0;
+    gap: 2vh;
+}
+.vehicle-card:hover {
+    background-color: #f5f5f5;
+}
+
+.vehicle-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.vehicle-card-alert {
+    padding: 7px 7px 7px 10px;
+    border: solid 0.5px #e2e7eb;
+    background-color: #f5f5f5;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+.vehicle-card-line {
+    height: 1vw;
+    width: 0.3vw;
+    background: var(--active);
+}
+
+.vehicle-number {
+    text-align: start;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.4vw;
+}
+
+.parking {
+    font-size: 10px;
+    padding-left: 5px;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+}
+
+.battery-perc {
+    font-size: var(--sm-font);
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+}
+
+.dotted-line {
+    border-left: 0.15vw dotted var(--active);
+    height: 1vw;
+    position: relative;
+    left: 1.25vw;
+    max-width: 2vw;
+}
+
+.location-sec {
+    margin-top: -0px;
+    margin-left: -11px;
+}
+
+.location-name {
+    font-size: var(--sm-font);
+    font-weight: 400;
+    color: var(--text-color);
+    max-width: 80%;
+    position: relative;
+    left: 0.9vw;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.card-alert {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    color: var(--white);
+    font-size: var(--sm-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    line-height: 2;
+    position: relative;
+    top: -10px;
+}
+
+.card-alert .material-icons,
+.alert-box .material-icons {
+    color: inherit;
+    /*font-size: inherit;*/
+}
+
+.address-marker {
+    height: 1vw;
+}
+
+.view-address {
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2px 16px;
+}
+
+.view-address:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}

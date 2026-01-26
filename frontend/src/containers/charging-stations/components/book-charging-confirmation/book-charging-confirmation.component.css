@@ -1,0 +1,108 @@
+.charging-confirmation-container {
+    width: 20vw;
+    margin: 0 auto;
+}
+
+.success-icon {
+    margin-top: 20px;
+}
+
+.success-icon.material-icons {
+    color: var(--active);
+    font-size: 5vw !important;
+    font-weight: bolder;
+}
+
+.success-msg {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.caption {
+    padding: 20px;
+    line-height: 1.38;
+    color: #adacb4;
+    text-align: center;
+}
+
+.w-card {
+    padding: 1vw;
+    border-radius: 8px;
+    background-color: #CEEEE7;
+    border: solid 1px #d0d0d0;
+    width: inherit;
+}
+
+.w-card-hd {
+    color: #476487;
+}
+
+.btn-modify {
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    color: #19dbb0;
+    max-height: 40px;
+    padding: 8px 16px;
+}
+
+.btn-modify:hover {
+    background-color: #ffffff;
+}
+
+.btn-back {
+    width: 335px;
+    height: 60px;
+    border-radius: 4px;
+    border: solid 1px #e5e5e5;
+    background-color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    color: #19dbb0;
+}
+
+.btn-back:hover {
+    background-color: #19dbb0;
+    color: #ffffff;
+}
+
+.btn-book-slot {
+    width: 335px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #19dbb0;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn-book-slot:hover {
+    border: solid 1px #e5e5e5;
+    background-color: #ffffff;
+    color: #19dbb0;
+}
+
+.btn-direction {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: solid 2px #4a90e2;
+    background-color: #ffffff;
+    color: #4a90e2;
+    margin: 1vw auto;
+}
+
+.btn-direction:hover {
+    color: #fff;
+    background-color: var(--active-hover);
+}
+
+.booking-info {
+    line-height: 2;
+}
+
+.nav-button-container {
+    position: absolute;
+    bottom: 10vh;
+    gap: 10% !important;
+}

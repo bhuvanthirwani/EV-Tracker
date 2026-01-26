@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Archia';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/Archia-Regular.otf') format('truetype');
+    src: url('./assets/fonts/Archia-Regular.ttf') format('truetype');
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 1.115vw;
+    background: var(--background);
+    font-family: "Archia", sans-serif, serif !important;
+}
+
+:root {
+    --background: #fafafa;
+    --card-background: #f9f9f9;
+    --accent-color: #f16677;
+    --active: #0cd091;
+    --active-hover: #00c59b;
+    --drawer-width: 16vw;
+    --drawer-width-closed_state: 65px;
+    --primary-color: #09213d;
+    --primary-accent-color: rgba(255, 255, 255, 0.15);
+    --snack-default-bg: rgb(9, 33, 61, 0.8);
+    --white: #fff;
+    /* --light-grey: #889399; */
+    --light-grey: #909090;
+    --header-text-color: rgba(255, 255, 255, 0.6);
+    /* --border-color: #ecf0f3; */
+    --border-color: #d9d9d9;
+    --sidebar-background: #fff;
+    --text-color: #323643;
+    --font-family: Archia;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Softened shadow */
+    --spacing: 4px;
+    /* --border-radius: 8px; */
+    --border-radius: 16px;
+    --error-color: var(--accent-color);
+    --header-height: 0px;
+    --hollow-button-border-color: #8dedd8;
+    --hollow-button-background-color: rgba(182, 243, 230, 0.1);
+    --xlg-font: 2vw;
+    --lg-font: 1.4vw;
+    --sm-font: 0.975vw;
+    --xs-font: 0.8vw;
+    --xxs-font: 0.7vw;
+    --blue: #4a90e2;
+    --aliceblue: #f0f8ff;
+    --default-border: 1px solid var(--border-color);
+    --warning-font-color: #F5A123;
+}
+
+button {
+    padding: 16px 24px;
+    outline: none;
+    color: var(--white);
+    background: var(--active);
+    border: none;
+    cursor: pointer;
+    text-transform: full-size-kana;
+    letter-spacing: 1px;
+    font-size: inherit;
+    /*width: 100%;*/
+    border-radius: 4px;
+    font-family: var(--font-family);
+}
+
+button:hover {
+    background: var(--active-hover);
+}
+
+button:disabled,
+button:disabled:hover {
+    background: var(--light-grey);
+    box-shadow: unset;
+}
+
+button.outlined {
+    background-color: var(--white) !important;
+    border: 2px solid var(--active);
+    color: var(--active);
+}
+
+.material-icons {
+    color: var(--light-grey);
+}
+
+.error-text {
+    font-size: var(--xs-font);
+    color: var(--error-color);
+}
+
+.live-text,
+.success-text,
+.active-text {
+    font-size: var(--xs-font);
+    color: var(--active);
+}
+
+.ev-sidebar-map-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 34% 66%);
+    min-height: 100vh;
+    max-height: 100vh;
+    flex-grow: 1;
+}
+
+.ev-sidebar-map-container.reversed {
+    grid-template-columns: repeat(auto-fill, 66% 34%) !important;
+}
+
+.hide-map {
+    grid-template-columns: repeat(auto-fill, 100%) !important;
+}
+
+a {
+    text-decoration: unset !important;
+}
+
+.ev-btn {
+    border: solid 1px var(--hollow-button-border-color) !important;
+    background-color: var(--hollow-button-background-color);
+    color: var(--active);
+    display: flex;
+    align-items: center;
+}
+
+.ev-btn .MuiIcon-root {
+    color: inherit !important;
+    font-size: inherit;
+}
+
+.ev-btn:hover {
+    background-color: var(--active);
+    color: var(--white);
+    transition: ease-in 0.2s;
+}
+
+.small-btn {
+    padding: 1vh 1vw;
+    font-size: var(--sm-font);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-evenly {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-center-gap {
+    align-items: center;
+    gap: 8px;
+}
+
+.flex-column-vert-center {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.flex-justify-end {
+    justify-content: end;
+}
+
+.gap-5 {
+    gap: 3px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.MuiInputBase-input,
+.MuiOutlinedInput-input,
+.MuiInputBase-root,
+.MuiOutlinedInput-root {
+    font-size: var(--sm-font) !important;
+    height: unset !important;
+    padding: 8px 14px 8px 4px !important;
+}
+
+.MuiAutocomplete-inputRoot {
+    max-height: 100px !important;
+    overflow-y: auto;
+}
+
+
+.material-icons {
+    font-size: 1.4vw !important;
+    /* cursor: pointer; */
+}
+
+.cancel-btn,
+.cancel-btn:hover {
+    height: max(3vh, 42px);
+    width: 20%;
+    background-color: var(--white);
+    border: solid 1px var(--border-color);
+    padding: unset;
+    color: var(--light-grey);
+    font-size: var(--sm-font);
+}
+
+.apply-btn {
+    height: max(3vh, 42px);
+    width: 20%;
+    padding: unset;
+    font-size: var(--sm-font);
+}
+
+.MuiSnackbarContent-root {
+    background-color: unset !important;
+}
+
+.success {
+    background-color: #198754FF !important;
+    color: var(--white) !important;
+}
+
+.error {
+    background-color: var(--error-color) !important;
+    color: var(--white) !important;
+}
+
+.warning,
+.warning .material-icons {
+    color: var(--warning-font-color) !important;
+}
+
+.info {
+    background-color: var(--white) !important;
+    color: var(--primary-color) !important;
+}
+
+.xlg-font {
+    font-size: var(--xlg-font) !important;
+}
+
+.lg-font {
+    font-size: var(--lg-font) !important;
+}
+
+.sm-font {
+    font-size: var(--sm-font) !important;
+}
+
+.xs-font {
+    font-size: var(--xs-font) !important;
+}
+
+.xxs-font {
+    font-size: var(--xxs-font) !important;
+}
+
+.static-container {
+    max-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    gap: 3vh;
+    padding: 1.5vw 12vw 1.5vw 5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-start-gap {
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.app-version {
+    color: var(--light-grey);
+    width: var(--drawer-width-closed_state);
+    padding: 4px 0 0 0;
+    /* font-size: 55% !important; */
+}
+
+.MuiInputBase-root {
+    padding-top: 0.3vw !important;
+}
+
+.MuiPaper-root {
+    max-width: unset !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.MuiPickersYear-yearButton,
+.MuiYearPicker-root button {
+    width: unset;
+    height: unset;
+    padding: unset !important;
+}
+
+
+.empty-state {
+    margin: 15px 20px;
+    padding: 25px;
+    background: var(--background);
+    border-radius: 8px;
+    min-height: 80px;
+    color: var(--light-grey);
+}
+
+.policy-links {
+    position: absolute;
+    bottom: 1vh;
+    width: 100vw;
+}
+
+.policy-links a {
+    color: var(--primary-color);
+}
+
+.policy-links a:hover {
+    text-decoration: underline !important;
+}
+
+.MuiMenuItem-root.app-version {
+    padding-bottom: unset !important;
+}
+
+.border {
+    border: var(--default-border);
+    border-radius: var(--border-radius);
+}
+
+.standard-padding {
+    padding: 1.785vh 1.116vw;
+}
+
+.standard-padding-small {
+    padding: 1vh 0.5vw;
+}
+
+.grey-background {
+    background-color: #f5f5f5;
+}
+
+.dark-bg-on-dark {
+    background-color: var(--primary-accent-color) !important;
+}
+
+.grey-text {
+    color: var(--light-grey);
+}
+
+.white {
+    background-color: var(--white);
+}
+
+.white-font {
+    color: var(--white);
+}
+
+.grey-font {
+    color: var(--light-grey);
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+hr {
+    width: 100% !important;
+}
+
+.standard-row-gap {
+    row-gap: 1.5vh;
+}
+
+.standard-ui-warning {
+    background-color: #FFF6E9;
+    margin: 0 0 1.8vh;
+    padding: 1.8vh 1vw !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--warning-font-color) !important;
+}
+
+.strong-font {
+    font-weight: 700;
+}
+
+.emphasis-border {
+    border-color: none;
+    border-radius: 40px;
+}
+
+.standard-margin {
+    margin: 2vh 2vw;
+}
+
+.primary-font {
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-3-col {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.75vw;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.85);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(.85);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(.85);
+    }
+
+    100% {
+        transform: scale(0.85);
+    }
+}
+
+.heartbeat-animation {
+    animation: heartbeat 8s infinite;
+}
+
+
+.fill-width {
+    width: -webkit-fill-available;
+}

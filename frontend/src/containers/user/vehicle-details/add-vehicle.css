@@ -1,0 +1,27 @@
+.add-vehicle-wrapper > div > div {
+    min-width: 36vw;
+}
+
+.add-vehicle-wrapper h2 {
+    text-align: center;
+}
+
+.add-vehicle-wrapper .button-wrapper {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: end;
+}
+
+.add-vehicle-wrapper > div > div > div > div {
+    justify-content: center;
+}
+
+.add-vehicle-wrapper .form-wrapper,
+.add-vehicle-wrapper .form-wrapper div {
+    gap: 24px;
+}
+
+.input-control {
+    gap: 24px;
+    min-width: 36px;
+}

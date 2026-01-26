@@ -1,0 +1,71 @@
+.reports-container {
+    padding: 1vh 1.5vw;
+    height: 100vh;
+}
+
+.reports-filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.date-filter {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.table-container {
+    position: relative;
+    top: 90px;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 2.5;
+}
+
+.table td,
+.table th {
+    text-align: center;
+}
+
+.table thead,
+thead tr,
+tr th {
+    position: sticky;
+    top: 0;
+}
+
+table td {
+    border: 1px solid #e0e5eb;
+}
+
+table th {
+    border: 1px solid #d7dde6;
+}
+
+table th {
+    color: #4a4a4a;
+}
+
+table > thead {
+    background: #e0e5eb;
+}
+
+tbody > tr:nth-child(odd) {
+    background: var(--white);
+}
+
+tbody > tr:nth-child(even) {
+    background: #f7f8fa;
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border: 0;
+    padding: 4px 8px;
+}

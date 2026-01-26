@@ -1,0 +1,41 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
+    background-color: var(--sidebar-background);
+    z-index: 5;
+    padding: 0 1.115vw;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: inherit;
+    position: sticky;
+    top: 0;
+    background: var(--sidebar-background);
+    z-index: 10;
+    /* padding: 2vh 1vw 1vh; */
+    padding: 2vh 0 1vh;
+}
+
+.sidebar-header * {
+    display: flex;
+}
+
+.sidebar-title {
+    font-size: 1.15vw;
+    font-weight: bold;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    padding: 1vh 1vw;
+}

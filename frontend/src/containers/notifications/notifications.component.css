@@ -1,0 +1,50 @@
+.notifications-card-container {
+    margin: 0 0 1vh;
+}
+
+.notifications-card {
+    display: grid;
+    width: inherit;
+    padding: 1.5vw 0;
+    grid-template-columns: repeat(auto-fill, 18% 80%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notifications-icon {
+    padding: 1vw;
+    border-radius: 50%;
+    background-color: var(--border-color);
+}
+
+.notifications-card-info {
+    display: grid;
+    gap: 0.75vw;
+}
+
+.notifications-card-title {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.notifications-card-registration-number {
+    color: var(--blue);
+}
+
+.notifications-card-time {
+    color: var(--light-grey);
+}
+
+.notifications-card-cta,
+.notifications-card-cta * {
+    color: var(--active) !important;
+}
+
+.notifications-card-registration-number,
+.notifications-card-body,
+.notifications-card-time {
+    font-size: var(--sm-font);
+}
+
+.notifications-card-registration-number a {
+    color: unset;
+}

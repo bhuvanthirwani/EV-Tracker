@@ -1,0 +1,44 @@
+.time-slot-dialog-position .MuiPaper-root {
+    text-transform: capitalize;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 18vh;
+    max-height: 24vh;
+}
+
+.slider {
+    width: 100%;
+    min-height: 20%;
+}
+
+.noUi-value {
+    top: -60%;
+    font-size: 12px;
+}
+
+.noUi-connect {
+    background: var(--active);
+}
+
+.noUi-marker {
+    display: none;
+}
+
+.noUi-tooltip {
+    border: unset;
+    font-size: 14px;
+}
+
+.noUi-target {
+    border-radius: 14px;
+    box-shadow: unset;
+}
+
+.noUi-touch-area {
+    background-color: #979797;
+}

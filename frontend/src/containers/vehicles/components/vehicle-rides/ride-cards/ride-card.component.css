@@ -1,0 +1,167 @@
+.live_trip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mb-2 {
+    margin-bottom: 5px;
+}
+
+.live_trip_bg {
+    background-color: aliceblue;
+}
+
+.dashed-line {
+    height: 25px;
+    border-left: dashed 1px #000000;
+    margin-left: 0.25vw;
+}
+
+.start-icon {
+    color: #50e3c2 !important;
+}
+
+.start-icon,
+.end-icon {
+    font-size: 10px;
+    padding-right: 10px;
+}
+
+.start-icon.material-icons,
+.end-icon.material-icons {
+    font-size: 10px !important;
+}
+
+.start-location,
+.end-location {
+    color: #4a4a4a;
+    font-size: var(--xs-font);
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ride-start-icon,
+.ride-end-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ride-start-icon {
+    background-image: url("../../../../../assets/images/map/trip-start-icon.svg");
+    width: 20px;
+    height: 20px;
+}
+
+.ride-end-icon {
+    background-image: url("../../../../../assets/images/map-pin-hollow.svg");
+    height: 24px;
+}
+
+.card-location-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 8% 90%);
+    align-items: start;
+}
+
+.km {
+    color: var(--primary-color);
+    font-size: var(--xs-font);
+    padding-left: 3px;
+}
+
+.line {
+    height: 3.5vh;
+    border-left: 1px solid #50e3c2;
+    margin-left: 8px;
+    display: flex;
+    line-height: 1;
+}
+
+.line.destination {
+    border-left: 2px dashed #000000;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    top: -1vh;
+}
+
+.start-location.ride_details {
+    font-size: var(--sm-font);
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 0;
+}
+
+.track-point-name {
+    font-size: 12px;
+    color: #4a4a4a;
+    line-height: 1;
+}
+
+.start-location.ride_track {
+    font-size: 12px;
+    color: #4a4a4a;
+}
+
+.event-info {
+    line-height: 1;
+}
+
+.event-name {
+    font-size: 12px;
+    color: #4a4a4a;
+    position: absolute;
+    left: 48px;
+    display: block;
+    line-height: 2;
+}
+
+.event-name.red {
+    color: red;
+}
+
+.mat-expansion-indicator::after {
+    color: #00d8a8 !important;
+}
+
+.collapse-bg {
+    background: var(--card-background)
+}
+
+.coll-blue-bg {
+    min-height: 100px;
+    background: #0E1D34;
+}
+
+.coll-card {
+    background: var(--white);
+    /* border-radius: 8px; */
+    /* padding: 15px 22px; */
+    /* margin: 16px; */
+    box-shadow: -2px 4px 24px 0px #00000040;
+    transition: 0.5s;
+    position: relative;
+    top: -6vh;
+    width: 86%;
+    margin: 0 auto;
+}
+
+.loc-time {
+    float: right;
+    font-size: var(--xs-font);
+    color: #6b839f;
+    text-align: end;
+}
+
+.close-expand-icon.material-icons,
+.trip-stats.material-icons{
+    font-size: 24px !important;
+    color: var(--active) !important;
+    cursor: pointer;
+}

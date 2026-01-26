@@ -5,6 +5,7 @@ services:
     build: ./backend
     container_name: vehicle-backend
     volumes:
+      - ./backend:/app
       - ./backend/data:/app/data
     environment:
       - DATABASE_URL=sqlite+aiosqlite:////app/data/vehicle.db
@@ -19,6 +20,8 @@ services:
   data-generator:
     build: ./generator
     container_name: data-generator
+    volumes:
+      - ./generator:/app
     depends_on:
       backend:
         condition: service_healthy
@@ -26,12 +29,15 @@ services:
       - BACKEND_URL=http://backend:8000/api/v1/telemetry
       - IMEI=123456789012345
 
-  # frontend:
-  #   build: ./frontend
-  #   container_name: vehicle-frontend
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - backend
-  #   environment:
-  #     - REACT_APP_API_URL=http://localhost:8000/api/v1
+  frontend:
+    build: ./frontend
+    container_name: vehicle-frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000/api/v1
