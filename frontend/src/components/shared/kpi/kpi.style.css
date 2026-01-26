@@ -1,0 +1,21 @@
+.kpi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: var(--box-shadow);
+    padding: 2vh 1vw;
+}
+
+.kpi-container h5 {
+    text-align: center;
+}
+
+.lt_100 {
+    color: var(--active);
+}
+
+.gt_100 {
+    color: var(--accent-color);
+}

@@ -1,0 +1,18 @@
+.estimated-rate-dialog-position .MuiPaper-root {
+    bottom: -16vh !important;
+    right: 16vw !important;
+    text-transform: capitalize;
+}
+
+.dialog-title,
+.value {
+    font-weight: 600 !important;
+}
+
+.values {
+    line-height: 2;
+}
+
+.key {
+    font-weight: 400;
+}

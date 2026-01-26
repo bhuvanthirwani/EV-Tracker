@@ -1,0 +1,53 @@
+const API = {
+	GET_ALL_LOCATION: 'fetch-reverse-geoencode',
+	LOGIN: 'user-login',
+	BOOK_CHARGING_STATION: 'book-charging-station',
+	RIDE_WAYPOINTS: 'trips/waypoints',
+	VEHICLE_GRAPHS: 'fetch-vehicle-by-parameter',
+	GET_ESTIMATE_RATES: 'get-charging-estimated-prices',
+	GET_ALL_REPORT: 'fleet-analytics',
+	GET_RIDE_REPORT: 'all-trips',
+	GET_BATTERY_REPORT: 'all-chargings',
+	AVAILABLE_SLOTS: 'get-available-charging-slots',
+	DASHBOARD_FILTER_LOOKUP: 'fetch-user-filters',
+	CHANGE_MODE: 'change-drive-mode',
+	OVERALL_SPEND: 'charging-analytics?',
+	REFRESH_TOKEN: 'refresh-token',
+	STOP_VEHICLE: 'stop-vehicle',
+	START_VEHICLE: 'start-vehicle',
+	VEHICLE_REPORT: 'vehicle-data',
+	VEHICLE_REPORT_INTERNAL: 'fetch-all-vehicle-report-internal',
+	NOTIFICATIONS: 'notifications',
+	FCM_TOKEN: 'update_fcm_token',
+	GET_RIDES: 'get-trips',
+	GET_RIDE_ANALYTICS: 'get-trip-analytics',
+	GET_RIDE_ANALYTICS_BY_T_ID: 'trip-analytics',
+	GET_LIVE_TRIPS: 'get-live-trips',
+	USER_VEHICLES: 'user-vehicles',
+	CHARGING_HUBS: 'charging-hubs',
+	VEHICLES_UPDATE: 'vehicles-update',
+	GET_VEHICLE_UPDATE: 'get-vehicle-update',
+	V3_GET_VEHICLE_UPDATE: 'get-vehicle-update',
+	V4_GET_VEHICLE_UPDATE: 'get-vehicle-update',
+	USER_CHANGE_PASSWORD: 'update-password',
+	UPDATE_USER_PROFILE: 'update-user-profile',
+	VEHICLE_STATIC_DETAILS: 'vehicle-static-details',
+	ALL_VEHICLE_REPORT: 'fetch-all-vehicle-report',
+	ALL_VEHICLE_DATA: 'fetch-all-vehicle-data',
+	TRIP_REPORT: 'request-trip-reports',
+	PAY: 'pay',
+	CHARGING_HUBS_V2: 'charging-hubs',
+	FETCH_CHARGING_PASS: 'charging-pass',
+	BUY_CHARGING_PASS: 'charging-pass/buy',
+	VEHICLE_COMMANDS: 'vehicle/commands',
+	SERVICE_NETWORK: 'service-network',
+	CHARGING_REPORT: 'reports/charging',
+	LIVE_UPDATE: 'live-update'
+}
+
+export const VEHICLE_COMMANDS = {
+	TRIGGER: API.VEHICLE_COMMANDS + '/trigger',
+	STATUS: API.VEHICLE_COMMANDS + '/status'
+}
+
+export default API;

@@ -1,0 +1,150 @@
+.vehicle-details-wrapper {
+    width: 100%;
+    padding: 3vw;
+    gap: 36px;
+}
+
+.vehicle-details-wrapper p,
+.vehicle-details-wrapper h3 {
+    margin: unset;
+}
+
+.vehicle-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25% 75%);
+    gap: 4vw;
+}
+
+.select-vehicle {
+    gap: 30px;
+}
+
+.select-vehicle img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.vehicle-address-info-wrapper {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.vehicle-address {
+    padding-top: 16px;
+}
+
+.vehicle-address img,
+.emi-info img {
+    width: 1em;
+    height: 1em;
+    font-size: 1.5rem;
+}
+
+.vehicle-info,
+.user-info,
+.emi-info {
+    gap: 8px;
+}
+
+.vehicle-info>div,
+.user-info>div {
+    gap: 24px;
+    width: 100%;
+}
+
+.vehicle-info p {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 15vw 100%);
+}
+
+/* .vehicle-info div h3,
+.user-info div h3,
+.emi-info div h3 {
+    color: var(--primary-color);
+} */
+
+.detailed-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45% 35% 20%);
+    gap: 16px;
+}
+
+.detailed-info p {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40% 60%);
+    width: 100%;
+}
+
+.detailed-info button {
+    min-width: 10em;
+}
+
+.button-wrapper {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.emi-info {
+    display: none;
+}
+
+.address-button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80% 20%);
+    align-items: end;
+}
+
+.address-button-wrapper button {
+    width: 80%;
+    opacity: 0.5;
+}
+
+.vehicle-details-wrapper .material-icons {
+    font-size: 1.5rem !important;
+}
+
+/* Hover Effects */
+.info-card {
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.detail-row {
+    padding: 0.5rem 0;
+    transition: background-color 0.2s ease;
+}
+
+.detail-row:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+    padding-left: 0.5rem;
+}
+
+/* Icon hover effects */
+.material-icons.hover-scale:hover {
+    transform: scale(1.2);
+}
+
+/* Smooth transitions for vehicle selection */
+.select-vehicle .MuiAutocomplete-root {
+    transition: all 0.3s ease;
+}
+
+.select-vehicle .MuiAutocomplete-root:hover {
+    transform: scale(1.02);
+}
+
+/* Image loading state */
+.select-vehicle img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.select-vehicle img:hover {
+    transform: scale(1.05);
+}

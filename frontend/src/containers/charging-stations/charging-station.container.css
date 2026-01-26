@@ -1,0 +1,131 @@
+.km {
+    color: var(--primary-color);
+}
+
+.charging-station-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.station-name,
+.distance {
+    font-size: var(--lg-font);
+    font-weight: bold;
+}
+
+
+.charge-station-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2%;
+    margin: 0 0 1.48vh;
+}
+
+.charge-station-cards-container:hover {
+    background-color: var(--card-background);
+}
+
+.charge-station-card {
+    /* padding: 2vh 1vw; */
+    /* border-radius: 6px; */
+    /* border: solid 1px #11cea3; */
+
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, 70% 28%); */
+    gap: 2%;
+    height: fit-content;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.station-facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16%);
+}
+
+.connector-types {
+    display: flex;
+    /* gap: 2%; */
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.connector-types span:nth-child(even):before,
+.connector-types span:nth-child(even):after {
+    padding: 0 8px;
+}
+
+.connector-types span:nth-child(even):before,
+.connector-types span:nth-child(even):after {
+	content: '|';
+	color: var(--border-color);
+}
+
+
+
+.total-slots {
+    color: #8190b0;
+    font-size: 18px;
+}
+
+.slots-left {
+    color: #11cea3;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    padding-right: 2px;
+}
+
+.card-elements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+.btn-book {
+    padding: 4px 6px;
+    font-size: var(--xs-font);
+}
+
+.not_available {
+    width: 87px;
+    height: 16px;
+    margin: 10px 1px 16px 0px;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f16677;
+}
+
+.address {
+    font-size: var(--sm-font);
+    color: #323643;
+    padding-top: 0.4vh;
+}
+
+.charging-station__filters-container {
+    padding: 2vh 0 1vh;
+    margin-bottom: 1vh;
+    display: grid;
+    grid-auto-flow: column;
+    position: sticky;
+	background: rgba(255, 255, 255, 0.4);
+	top: 8vh;
+    backdrop-filter: blur(16px);
+    z-index: 10;
+}
+
+.charging-station__filter {
+    width: 100%;
+}

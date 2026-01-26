@@ -1,0 +1,80 @@
+.reports-container-wrapper {
+    width: 100%;
+    padding: 2vh 1vw;
+    gap: 16px;
+    max-height: calc(100vh - 4vh);
+}
+
+.reports-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 28% 12% 12% 45%);
+    gap: 1%;
+    align-items: center;
+}
+
+.reports-header button {
+    width: fit-content;
+    padding: 0 1vh;
+}
+
+.reports-header .text-overflow-ellipsis {
+    max-width: 64%;
+}
+
+.reports-header .MuiChip-root {
+    font-size: var(--xs-font);
+    margin-right: 8px;
+}
+
+.popup-box ul {
+    display: flex;
+    flex-direction: column;
+    padding: 2vh !important;
+    gap: 16px;
+}
+
+.popup-box button,
+.popup-box button:hover {
+    width: unset;
+    padding: 0 1vh;
+}
+
+.popup-box #tagsContainer {
+    width: 24vw !important;
+    height: min-content !important;
+    min-width: 100%;
+}
+
+.reports-container {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.reports-container thead {
+    line-height: 1.5;
+    font-size: var(--sm-font);
+}
+
+.reports-container th {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.reports-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reports-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.reports-container::-webkit-scrollbar-thumb {
+    background: var(--light-grey);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}

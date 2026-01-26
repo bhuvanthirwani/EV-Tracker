@@ -1,0 +1,317 @@
+@import "~mapbox-gl/dist/mapbox-gl.css";
+@import "~@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
+@import "~leaflet/dist/leaflet.css";
+
+:root {
+    --map-header-height: 6vh;
+    --map-marker-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.map-container,
+.share_live-map-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.share_live-map-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 0;
+}
+
+.share_live-map-container .mapboxgl-ctrl-top-right {
+    top: 94% !important;
+}
+
+
+.reduce-map-header-height {
+    height: calc(100vh - var(--map-header-height));
+}
+
+.direction-marker,
+.direction-marker-red,
+.direction-marker-orange {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--map-marker-box-shadow);
+}
+
+.direction-marker {
+    background-image: url('../../../assets/images/map/ev-marker.svg');
+}
+
+.direction-marker-red {
+    background-image: url('../../../assets/images/map/ev-marker-red.svg');
+}
+
+.direction-marker-orange {
+    background-image: url('../../../assets/images/map/ev-marker-orange.svg');
+}
+
+.charging-hub-marker {
+    background-color: #000;
+    background-image: url("../../../assets/images/map/charging-hub-icon.svg");
+    border-radius: 50%;
+    box-shadow: var(--map-marker-box-shadow);
+}
+
+.mapboxgl-ctrl-logo {
+    display: none !important;
+}
+
+.ride-marker {
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--map-marker-box-shadow);
+    padding: 0.5vh;
+    background-color: var(--active);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.live-speed-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100px;
+    min-height: 54px;
+}
+
+.live-speed-popup .speed {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.vehicle-marker-directional,
+.charging-hub-marker {
+    background-size: cover;
+    cursor: pointer;
+    margin: unset !important;
+    box-shadow: var(--map-marker-box-shadow);
+}
+
+.vehicle-marker-directional {
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.charging-hub-marker {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.mapboxgl-popup-content {
+    background-color: #012b5d;
+    color: white;
+    border-radius: 4px;
+    padding: unset;
+    position: relative;
+    bottom: 10px;
+}
+
+.mapboxgl-popup-tip {
+    border: none !important;
+}
+
+.vehicle-list-marker-label {
+    width: 40px;
+    height: 24px;
+    padding-right: 8px;
+    border-radius: 0 100px 100px 0;
+    box-shadow: 0 4px 7px 0 rgba(0, 7, 45, 0.25) !important;
+    background-color: #042c5c !important;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    /*right: 20px;*/
+    left: 36px;
+    bottom: 8px;
+    z-index: -1;
+    transform: rotate(0deg);
+}
+
+.map-header {
+    position: relative;
+    /* max-height: var(--map-header-height); */
+    min-height: var(--map-header-height);
+    /* width: 100%; */
+    z-index: 10;
+    background: var(--white);
+    padding: 0 1vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20% 50% 30%);
+}
+
+.map-header-actions .ev-btn {
+    max-width: fit-content;
+    max-height: 50%;
+}
+
+.map-header-actions {
+    width: inherit;
+    justify-content: center;
+}
+
+.map-header-date-container {
+    padding: 1vh 0;
+}
+
+.leaflet-div-icon {
+    border: unset !important;
+    background: transparent !important;
+}
+
+.leaflet-touch .leaflet-bar a {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+
+.leaflet-popup-tip-container {
+    display: none;
+}
+
+.leaflet-popup-content {
+    width: max-content !important;
+}
+
+.internal-links a {
+    border: 1px solid var(--active);
+    border-radius: 6px;
+    padding: 4px;
+    color: var(--primary-color);
+}
+
+.internal-links a:hover {
+    background-color: var(--active);
+    color: var(--white);
+}
+
+.internal-links a .material-icons {
+    font-size: inherit !important;
+    color: inherit;
+}
+
+.vehicle-marker-popup {
+    gap: 16px;
+}
+
+.last-update {
+    gap: 4px;
+}
+
+.vehicle-marker-popup * {
+    font-size: var(--sm-font) !important;
+}
+
+.vehicle-marker-popup .registration-number {
+    letter-spacing: 0.02rem;
+}
+
+.live-speed-marker {
+    pointer-events: none;
+}
+
+.trip-marker-label {
+    padding: 1vh 2vh;
+    font-size: var(--xs-font);
+    line-height: 1.5;
+}
+
+
+/* START: LEAFLET MARKER CLUSTER OVERRIDE */
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+    background-color: var(--white) !important;
+    background-blend-mode: lighten;
+    color: var(--white);
+    box-shadow: var(--map-marker-box-shadow);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+    background-color: var(--active) !important;
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small,
+.leaflet-oldie .marker-cluster-medium,
+.leaflet-oldie .marker-cluster-large {
+    background-color: var(--white) !important;
+    color: var(--white);
+    box-shadow: var(--map-marker-box-shadow);
+}
+
+.leaflet-oldie .marker-cluster-small div,
+.leaflet-oldie .marker-cluster-medium div,
+.leaflet-oldie .marker-cluster-large div {
+    background-color: var(--active);
+}
+
+
+.marker-cluster {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-cluster div {
+    width: 36px;
+    height: 36px;
+    margin-left: unset !important;
+    margin-top: unset !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+.mapboxgl-ctrl-geocoder,
+.directions-control,
+.mapboxgl-map,
+.leaflet-container,
+.marker-cluster div {
+    font-family: unset !important;
+}
+
+.leaflet-popup-pane,
+.leaflet-control {
+    cursor: pointer;
+}
+
+/* END: LEAFLET MARKER CLUSTER OVERRIDE */
+
+
+@media screen and (max-width:481px) {
+    .share_live-map-container .mapboxgl-ctrl-top-right {
+        display: none;
+    }
+}
+
+@media screen and (min-width:481px) {
+    .share_live-map-container .mapboxgl-ctrl-top-right {
+        top: 90% !important
+    }
+}

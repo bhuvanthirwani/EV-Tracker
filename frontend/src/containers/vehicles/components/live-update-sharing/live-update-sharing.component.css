@@ -1,0 +1,235 @@
+.expired_container {
+	width: 100vw;
+	height: 60vh;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-top: 5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.expired_container img {
+	width: 50%;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.banner img {
+	padding-right: 5%;
+}
+
+
+.banner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	background-color: #202124;
+	z-index: 100;
+}
+
+.navigate-button {
+	display: flex;
+	flex-direction: row;
+	background-color: #F5F5F5;
+	color: #666666;
+	border-radius: 8px;
+	gap: 8px;
+	align-items: center;
+	padding: 9px 12px 9px 8px;
+}
+
+.card-section {
+	width: 24%;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	position: absolute;
+	left: 16px;
+	bottom: 12px;
+	top: unset;
+	gap: 10px;
+}
+
+.marketing-card {
+	background-image: url('./../../../../assets/images/promoCard.png');
+	background-color: #f5feff;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+	padding: 30px;
+    width: -webkit-fill-available;
+}
+
+.marketing-card div div:nth-child(1) {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.marketing-card div div:nth-child(2) {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* .banner-text:first-child {
+	font-size: 16px;
+	font-weight: 500;
+} */
+
+/* .banner-text div:nth-child(2) {
+	font-size: 28px;
+	font-weight: 800;
+} */
+.banner-text {
+	font-size: 28px;
+	font-weight: 800;
+}
+
+.sub-heading-text div:nth-child(1) {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.sub-heading-text div:nth-child(2) {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.battery-card-text {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.location-card div div:nth-child(1) {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.location-card div div:nth-child(2) {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.location-card div:nth-child(2) {
+	font-size: 16px;
+	font-weight: 400;
+	opacity: 90%;
+}
+
+@media screen and (max-width: 481px) {
+	/* .banner-text:first-child {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.banner-text div:nth-child(2) {
+		font-size: 18px;
+		font-weight: 700;
+	} */
+	.banner-text {
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.banner {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.card-section {
+		width: unset;
+		justify-content: center;
+		align-items: center;
+		right: 16px;
+	}
+
+	.marketing-card {
+		padding: 16px;
+	}
+
+	.sub-heading-text div:nth-child(2) {
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	.marketing-card div div:nth-child(1) {
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	.marketing-card div div:nth-child(2) {
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.battery-card-text {
+		font-size: 16px;
+		font-weight: 700;
+		padding: 16px;
+	}
+
+	.location-card {
+		padding: 16px;
+		border-radius: 12px;
+	}
+
+	.location-card div div:nth-child(1) {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	.navigate-button {
+		display:  flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigate-button span {
+		display: none;
+	}
+
+	.location-card div:nth-child(2) {
+		font-size: 14px;
+	}
+
+	.battery-style{
+		width:35px !important;
+		height: 16px !important;
+	}
+}
+
+@media screen and (min-width:481px) {
+	.card-section {
+		width: 28vw;
+	}
+	.battery-style{
+		width:35px !important;
+		height: 16px !important;
+	}
+}
+
+@media screen and (max-width: 421px) {
+	.expired_container {
+		flex-wrap: wrap;
+		align-items: center;
+		height: auto;
+		position: absolute;
+		top: 25%;
+	}
+
+	.expired_container img {
+		width: 100%;
+	}
+
+	.expired_container div {
+		min-width: 90%;
+		font-size: 14px;
+		text-align: center;
+	}
+}

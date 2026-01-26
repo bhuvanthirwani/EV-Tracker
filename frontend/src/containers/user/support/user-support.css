@@ -1,0 +1,129 @@
+.support-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 27% 73%);
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+}
+
+.company-details {
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: var(--box-shadow);
+}
+
+.company-details p,
+.company-details h1,
+.company-details h2 {
+    margin: unset;
+}
+
+.company-details-name {
+    padding: 1.5vw;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.company-details-name a {
+    color: inherit;
+}
+
+.company-address,
+.company-contact-info {
+    padding: 1.5vw;
+    gap: 8px;
+}
+
+.sidebar-img-wrapper {
+    min-height: 20vh;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-img-wrapper img {
+    width: 100%;
+}
+
+.contact-form-wrapper form {
+    padding: 2vw;
+    gap: 24px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form-wrapper h1 {
+    text-align: center;
+    padding: 1vw 2vw;
+    background: var(--primary-color);
+    color: var(--white);
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.company-address {
+    align-items: start;
+}
+
+.company-address img {
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+}
+
+.contact-form-wrapper {
+    width: 45vw;
+}
+
+.company-contact-info a {
+    color: var(--primary-color);
+}
+
+/* Hover Effects */
+.contact-item {
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-wrapper form {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.contact-form-wrapper .MuiTextField-root {
+    transition: all 0.3s ease;
+}
+
+.contact-form-wrapper .MuiTextField-root:hover {
+    transform: scale(1.01);
+}
+
+.contact-form-wrapper .MuiTextField-root:focus-within {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb, 0, 0, 255), 0.1);
+}
+
+.apply-btn {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.apply-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.apply-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Company details hover */
+.company-details {
+    transition: all 0.3s ease;
+}
+
+.company-details:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}

@@ -1,0 +1,5 @@
+#tagsContainer .MuiInputBase-root {
+    display: flex !important;
+    flex-flow: wrap !important;
+    padding: 0.4vw;
+}

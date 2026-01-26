@@ -1,0 +1,44 @@
+.component-loader,
+.component-loader img {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    min-width: 14vw;
+    width: inherit;
+}
+
+.full-page-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.full-page-loader img {
+    max-height: 16vh;
+    max-width: 16vh;
+}
+
+.dom-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-size: 2vh
+}
