@@ -89,6 +89,32 @@ Experience the future of fleet management in minutes.
 
 ---
 
+## 🚢 Deployment (PROD)
+
+Deploying to production involves setting up the server, running containers, and configuring the Reverse Proxy with SSL.
+
+### 1. Server Setup
+Installs Docker, Nginx, and secures ports 80/443.
+```bash
+sudo ./setup.sh
+```
+
+### 2. Manage Containers
+Build and run the Backend, Frontend, and Generator services efficiently.
+```bash
+./docker_manager.sh
+# Option 1: Build Images
+# Option 2: Run Containers (--no-build)
+```
+
+### 3. Nginx & SSL
+Configures Nginx to route traffic to Frontend (3000) and API (8000), and sets up Let's Encrypt SSL.
+```bash
+sudo ./nginx.sh
+```
+
+---
+
 ## 🏗️ Architecture
 
 The project follows a modern microservices-adjacent architecture:
