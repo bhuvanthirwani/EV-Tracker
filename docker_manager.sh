@@ -19,7 +19,7 @@ read -p "Select an option [1-5]: " choice
 case $choice in
     1)
         echo "🚀 Building Docker images..."
-        docker compose build
+        docker compose build --no-cache
         ;;
     2)
         echo "🏃 Starting containers using docker-compose..."
