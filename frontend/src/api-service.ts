@@ -51,7 +51,7 @@ axios.interceptors.response.use((response: any) => {
 	}
 });
 
-const URI = (typeof process !== 'undefined' && process.env.REACT_APP_API_URL) || '/api/v1';
+const URI = '/api/v1';
 
 export const abortController = new AbortController();
 

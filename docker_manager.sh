@@ -23,7 +23,7 @@ case $choice in
         ;;
     2)
         echo "🏃 Starting containers using docker-compose..."
-        docker compose up --no-build
+        docker compose up
         echo "✅ App is running at http://localhost:3000"
         ;;
     3)
