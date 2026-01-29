@@ -23,11 +23,13 @@ case $choice in
         ;;
     2)
         echo "🏃 Starting containers using docker-compose..."
-        docker compose up -d
+        docker compose up --no-build
         echo "✅ App is running at http://localhost:3000"
         ;;
     3)
-        echo "⚠️  Pushing multi-container apps is complex. Use CI/CD or docker compose push."
+        echo "🔑 Logging into Docker Hub..."
+        echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
+        echo "⬆️ Pushing images defined in docker-compose.yml..."
         docker compose push
         ;;
     4)

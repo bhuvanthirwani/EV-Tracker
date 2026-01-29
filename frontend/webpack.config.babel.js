@@ -36,7 +36,15 @@ const commonConfig = {
 			logging: 'error'
 		},
 		open: true,
-		historyApiFallback: true
+		historyApiFallback: true,
+		proxy: [
+			{
+				context: ['/api'],
+				target: 'http://localhost:8000', // Backend URL in dev
+				changeOrigin: true,
+				secure: false,
+			},
+		],
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
